@@ -15,12 +15,23 @@ class LinkedList {
   constructor(value) {
     this.head = {
       value: value,
-      next: null,
+      //   next: null,
     };
-    this.tail = this.head;
-    this.length = 1;
+    // this.tail = this.head;
+    // this.length = 1;
+  }
+  append(value) {
+    //   code here
+    this.next = {
+      next: value,
+    };
+    this.next = value;
   }
 }
 
 const myLinkedList = new LinkedList(10);
+
+myLinkedList.append(5);
+myLinkedList.append(16);
+
 console.log(myLinkedList);
